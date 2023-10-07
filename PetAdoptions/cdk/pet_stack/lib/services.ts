@@ -78,6 +78,7 @@ export class Services extends Stack {
                 name: 'petid',
                 type: ddb.AttributeType.STRING
             },
+            readCapacity: 2000,
             removalPolicy:  RemovalPolicy.DESTROY
         });
 
