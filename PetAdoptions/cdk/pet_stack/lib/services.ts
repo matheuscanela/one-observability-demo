@@ -673,7 +673,7 @@ var dashboardBody = readFileSync("./resources/cw_dashboard_fluent_bit.json","utf
         const petAdoptionsStepFn = new PetAdoptionsStepFn(this,'StepFn');
 
         this.createSsmParameters(new Map(Object.entries({
-            '/petstore/trafficdelaytime':"1",
+            '/petstore/trafficdelaytime':"60",
             '/petstore/rumscript': " ",
             '/petstore/petadoptionsstepfnarn': petAdoptionsStepFn.stepFn.stateMachineArn,
             '/petstore/updateadoptionstatusurl': statusUpdaterService.api.url,

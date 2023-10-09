@@ -132,11 +132,20 @@ var jqxhr = $.getJSON( "/petfood", function() {
             </ul>
             <br />
             <form asp-controller="Payment" asp-action="MakePayment" method="post">
-                <input class="btn btn-success btn-lg btn-block" type="submit" value="Pay" />
+                @{
+                    if(Model.pettype != "kitten"){
+                        <input class="btn btn-success btn-lg btn-block" type="submit" value="Pay" />
+                    }
+                }
+                @* <input class="btn btn-success btn-lg btn-block" type="submit" value="Pay" /> *@
                 <input type="hidden" asp-for="@Model.petid" name="petid" />    
                 <input type="hidden" asp-for="@Model.pettype" name="pettype" />
             </form>
         </div>
     </div>
 </div>
+<script>
+    throw Error("Ops - you found me :)");
+    console.log(@Model.pettype);
+</script>
 
