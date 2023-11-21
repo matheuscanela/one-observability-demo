@@ -352,6 +352,9 @@ export class Services extends Stack {
         // Add SSM Permissions to the node role
         cluster.defaultNodegroup?.role.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName("AmazonSSMManagedInstanceCore"));
 
+        // Add CloudWatchAgent Permissions to the node role
+        cluster.defaultNodegroup?.role.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName("CloudWatchAgentServerPolicy"));
+
         // Add CloudWatch metrics permission
         cluster.defaultNodegroup?.role.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName("CloudWatchFullAccess"));
 
