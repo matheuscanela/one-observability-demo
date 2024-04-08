@@ -1,0 +1,6 @@
+{
+  "Applications": {
+    "PetSiteECRImageURL": "062914796799.dkr.ecr.ap-southeast-2.amazonaws.com/cdk-hnb659fds-container-assets-062914796799-ap-southeast-2:ca3e38dea21c93aede797af9f7673e5ee38722fd3b8adc15bc963eee4c480fae",
+    "PetStoreServiceAccountArn": "arn:aws:iam::062914796799:role/Applications-PetSiteServiceAccount6A1851C9-KTPsYegajC3N"
+  }
+}
